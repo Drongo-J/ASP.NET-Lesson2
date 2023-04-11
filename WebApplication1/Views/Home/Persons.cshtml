@@ -1,0 +1,22 @@
+﻿@model WebApplication1.Models.PersonViewModel
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+</head>
+<body>
+    @foreach (var item in Model.Persons)
+    {
+        <div class="card" style="width: 18rem;">
+            <img class="card-img-top" src="@item.ImageUrl" alt="Card image cap">
+            <div class="card-body">
+                <h5 class="card-title">@item.Name</h5>
+                <p class="card-text">Surname : @item.Surname</p>
+                <a href="#" class="btn btn-primary">Age : @item.Age</a>
+            </div>
+        </div>
+    }
+</body>
+</html>
